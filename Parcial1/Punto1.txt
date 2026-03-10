@@ -1,0 +1,27 @@
+1. Clase
+Una clase es una plantilla o modelo que define las características (atributos) y comportamientos (métodos) que tendrán los objetos. 
+En programación orientada a objetos, la clase sirve como un molde a partir del cual se crean los objetos.
+
+2. Objeto
+Un objeto es una instancia de una clase. Representa una entidad concreta que tiene datos (atributos) y puede realizar acciones (métodos). 
+Por ejemplo, si existe una clase Producto, un objeto podría ser un producto específico como una manzana con precio y cantidad.
+
+3. self
+self es una referencia al objeto actual dentro de una clase en Python. Se utiliza para acceder a los atributos y métodos del mismo objeto. 
+Permite diferenciar entre las variables del objeto y las variables locales del método.
+
+4. Constructor
+El constructor es un método especial que se ejecuta automáticamente cuando se crea un objeto de una clase. 
+En Python se define con el método __init__ y se utiliza para inicializar los atributos del objeto.
+
+5. Programación Orientada a Objetos (POO)
+Es un paradigma de programación basado en el uso de clases y objetos. 
+Permite organizar el código de manera más estructurada, reutilizable y fácil de mantener, modelando entidades del mundo real mediante objetos que tienen atributos y métodos.
+
+6. Método
+Un método es una función definida dentro de una clase que describe el comportamiento de los objetos de esa clase. 
+Los métodos pueden modificar los atributos del objeto o realizar acciones utilizando esos datos.
+
+7. Instancia
+Una instancia es un objeto específico creado a partir de una clase. 
+Cuando se crea un objeto usando una clase, se dice que ese objeto es una instancia de esa clase.

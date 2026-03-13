@@ -8,7 +8,7 @@ class Empleado:
         self.años_experiencia = años_experiencia
 
     def __str__(self):
-        return f"ID: {self.ID}, Nombre: {self.nombre}, Salario: {self.salario}, Años de experiencia: {self.años_experiencia}"  
+        return f"ID: {self.ID}, Nombre: {self.nombre}, Salario: {self.salario}, Años de experiencia: {self.años_experiencia}"
 
     def calcular_salario(self):
         if 0 <= self.años_experiencia <= 2:

@@ -1,7 +1,6 @@
 import xml.etree.ElementTree as ET
 
 class Producto:
-
     def __init__ (self, ID: int, name: str, price: float, quantityOnStock: int):
         self.ID = ID
         self.nombre = name

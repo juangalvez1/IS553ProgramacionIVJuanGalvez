@@ -1,3 +1,7 @@
 # carpeta de archivos con punteros
 archivos/
 files/
+
+#carpeta pycache
+__pycache__/
+*.pyc

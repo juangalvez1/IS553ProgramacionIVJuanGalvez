@@ -3,7 +3,7 @@ from pacientes import *
 
 direccionArchivo = r"Parcial2\Punto2\files\pacientes.json"
 
-class Sistema:
+class SistemaPacientes:
     def __init__(self):
         self.pacientes = {}
 

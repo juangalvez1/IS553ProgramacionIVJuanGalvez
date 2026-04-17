@@ -39,7 +39,6 @@ class Producto:
 
     def toDict(self):
         return {
-            "tipo": "Producto",
             "id": self.__id,
             "nombre": self.__nombre,
             "precio": self.__precio,
@@ -47,7 +46,7 @@ class Producto:
         }
 
     def __str__(self):
-        return f"ID: {self.__id} | Nombre: {self.__nombre:<20} | Precio: ${self.__precio:>10,.0f} | Stock: {self.__cantidad:>3}"
+        return f"ID: {self.__id:<3} | Nombre: {self.__nombre:<20} | Precio: ${self.__precio:>10,.0f} | Stock: {self.__cantidad:>3}"
     
     
 class Computador(Producto):
@@ -81,7 +80,6 @@ class Computador(Producto):
     def toDict(self):
         data = super().toDict()
         data.update({
-            "tipo": "Computador",
             "ram": self.__ram,
             "procesador": self.__procesador
         })
@@ -124,7 +122,6 @@ class Celular(Producto):
     def toDict(self):
         data = super().toDict()
         data.update({
-            "tipo": "Celular",
             "almacenamiento": self.__almacenamiento,
             "camaras": self.__camaras
         })
@@ -152,7 +149,6 @@ class Accesorio(Producto):
     def toDict(self):
         data = super().toDict()
         data.update({
-            "tipo": "Accesorio",
             "categoria": self.__categoria
         })
         return data

@@ -88,7 +88,7 @@ class SistemaAlquiler:
         if not disponibles:
             print("   No hay vehículos disponibles en este momento.")
             return
-        print(f"\n{'─'*10} VEHÍCULOS DISPONIBLES ({len(disponibles)}) {'─'*10}")
+        print(f"\n{'-'*10} VEHÍCULOS DISPONIBLES ({len(disponibles)}) {'-'*10}")
         for vehiculo in disponibles:
             print(vehiculo)
 
@@ -97,7 +97,7 @@ class SistemaAlquiler:
         if not alquilados:
             print("   No hay vehículos alquilados en este momento.")
             return
-        print(f"\n{'─'*10} VEHÍCULOS ALQUILADOS ({len(alquilados)}) {'─'*10}")
+        print(f"\n{'-'*10} VEHÍCULOS ALQUILADOS ({len(alquilados)}) {'-'*10}")
         for vehiculo in alquilados:
             print(vehiculo)
 
@@ -142,11 +142,9 @@ class SistemaAlquiler:
         vehiculo = self.__buscarVehiculo(placa)
         costo = vehiculo.precioPorDia * dias
 
-        print(f"\    Vehículo : {vehiculo.placa} — {vehiculo.marca} {vehiculo.modelo}")
+        print(f"\n    Vehículo : {vehiculo.placa} — {vehiculo.marca} {vehiculo.modelo}")
         print(f"    Días     : {dias}")
         print(f"    Costo    : ${costo:,.0f}")
-
-        return costo
     
     def vehiculoCostoso(self):
         self.cargarVehiculos()

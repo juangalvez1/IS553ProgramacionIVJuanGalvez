@@ -78,7 +78,6 @@ def Menu1():
             dias  = PedirDias()
             try:
                 sistema.calcularCosto(placa, dias)
-                sistema.calcular
             except KeyError as error:
                 print(f"{error}")
 

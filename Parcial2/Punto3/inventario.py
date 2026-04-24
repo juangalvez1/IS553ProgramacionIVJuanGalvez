@@ -37,7 +37,7 @@ class Inventario:
         with open(direccionArchivo, "w", encoding="utf-8") as file:
             json.dump(datos, file, indent=4, ensure_ascii=False)
 
-        print(f"    Datos guardados correctamente en '{direccionArchivo}'.")
+        # print(f"    Datos guardados correctamente en '{direccionArchivo}'.")
 
     def cargarProductos(self):
         try:
@@ -63,7 +63,7 @@ class Inventario:
 
     def registrarProducto(self, producto):
         if producto.id in self.productos:
-            print("Este producto ya fue registrado.")
+            print("Esta id de producto ya fue registrada.")
             return
 
         self.productos[producto.id] = producto

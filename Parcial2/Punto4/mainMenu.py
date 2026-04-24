@@ -8,7 +8,7 @@ from Parcial2.Punto3.menu3 import *
 
 def MostrarMenu():
     print("\n" + "=" * 54)
-    print("\t  MENU PARCIAL 2")
+    print("\t\t  MENU PARCIAL 2")
     print("=" * 54)
     print("1. Ejecutar Punto 1")
     print("2. Ejecutar Punto 2")

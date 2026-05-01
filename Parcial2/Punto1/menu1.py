@@ -83,7 +83,8 @@ def Menu1():
 
         elif opcion == "9":
             vehiculoNuevo = CrearNuevoVehiculo()
-            sistema.agregarVehiculo(vehiculoNuevo)
+            if vehiculoNuevo:
+                sistema.agregarVehiculo(vehiculoNuevo)
 
         # Prueba de la funcion de este punto que se usa en el punto 4 del parcial
 

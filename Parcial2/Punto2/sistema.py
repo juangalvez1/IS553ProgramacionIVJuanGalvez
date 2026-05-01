@@ -113,22 +113,50 @@ class SistemaPacientes:
         print(masCritico)
 
 
-def validarEdad(self, edad):
-        return 0 <= edad <= 120
+def validarEdad(edad):
+    return 0 <= edad <= 120
 
+def validarGravedad(gravedad):
+    return 1 <= gravedad <= 4
+
+def PedirFloat(mensaje):
+    while True:
+        try:
+            valor = float(input(mensaje))
+            if valor < 0:
+                print("    El valor no puede ser negativo.")
+                continue
+            return valor
+        except ValueError:
+            print("    Ingresa un número válido.")
+
+def PedirInt(mensaje):
+    while True:
+        try:
+            valor = int(input(mensaje))
+            if valor <= 0:
+                print("    El valor debe ser mayor a 0.")
+                continue
+            return valor
+        except ValueError:
+            print("    Ingresa un número entero válido.")
 
 def IngresarNuevoPaciente():
     print("\n--- REGISTRAR PACIENTE ---")
     print("1) General  2) Prioritario  3) Urgencias")
     tipo = input("Seleccione el tipo: ").strip().lower()
     
-    try:
-        documento = int(input("Documento: "))
-        nombre = input("Nombre: ").strip()
-        edad = int(input("Edad: "))
-    except ValueError:
-        print("Error: documento y edad deben ser números enteros.")
+    if tipo not in ("1", "2", "3"):
+        print("    Tipo no válido.")
         return
+
+    documento = PedirInt("Documento: ")
+    nombre = input("Nombre: ").strip()
+    edad = PedirInt("Edad: ")
+
+    while not validarEdad(edad):
+        print("Edad ingresada no valida. Ingrese un valor de 0 a 120 años.")
+        edad = PedirInt("Edad: ")
     
     if tipo == "1":
         eps = input("Nombre de la EPS: ").strip()
@@ -139,7 +167,12 @@ def IngresarNuevoPaciente():
     elif tipo == "3":
         print("\nNiveles de gravedad: 1, 2, 3, 4")
         print("Siendo 1 levemente grave y 4 muy grave")
-        gravedad = int(input("Nivel de gravedad: "))
+        gravedad = PedirInt("Nivel de gravedad: ")
+
+        while not validarGravedad(gravedad):
+            print("Nivel de gravedad ingresado no valido. Ingrese un valor de 1 a 4.")
+            gravedad = PedirInt("Nivel de gravedad: ")
+
         paciente = PacienteUrgencia(documento, nombre, edad, "Pendiente", gravedad)
     else:
         print("Tipo inválido.")

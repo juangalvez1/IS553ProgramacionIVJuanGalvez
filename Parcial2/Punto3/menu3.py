@@ -37,26 +37,10 @@ def Menu3(inventario):
         opcion = input("  Selecciona una opción: ").strip()
 
         if opcion == "1":
-            codigo = int(input("Código: "))
+            codigo = PedirInt("Código: ")
             nombre = input("Nombre: ")
-
-            try:
-                precio = float(input("Precio: "))
-                if precio <= 0:
-                    print("Precio inválido")
-                    continue
-            except:
-                print("Precio inválido")
-                continue
-
-            try:
-                cantidad = int(input("Cantidad: "))
-                if cantidad <= 0:
-                    print("Cantidad inválida")
-                    continue
-            except:
-                print("Cantidad inválida")
-                continue
+            precio = PedirFloat("Precio: ")
+            cantidad = PedirInt("Cantidad: ")
 
             tipo = input("\nTipo \n1. Computador\n2. Celular\n3. Accesorio\nOpción: ")
             print()
@@ -85,33 +69,19 @@ def Menu3(inventario):
             inventario.mostrarInventario()
 
         elif opcion == "3":
-            codigo = int(input("Código del producto a vender: "))
-            try:
-                cantidad = int(input("Cantidad a vender: "))
-                if cantidad <= 0:
-                    print("Cantidad inválida")
-                    continue
-            except:
-                print("Cantidad inválida")
-                continue
+            codigo = PedirInt("Código del producto a vender: ")
+            cantidad = PedirInt("Cantidad a vender: ")
 
             inventario.venderProducto(codigo, cantidad)
 
         elif opcion == "4":
-            codigo = int(input("Código: "))
-            try:
-                cantidad = int(input("Cantidad: "))
-                if cantidad <= 0:
-                    print("Cantidad inválida")
-                    continue
-            except:
-                print("Cantidad inválida")
-                continue
+            codigo = PedirInt("Código del producto a reabastecer: ")
+            cantidad = PedirInt("Cantidad: ")
 
             inventario.reabastecer(codigo, cantidad)
 
         elif opcion == "5":
-            codigo = int(input("Código: "))
+            codigo = PedirInt("Código: ")
             inventario.consultarProducto(codigo)
 
         # Probando funcion del punto 4

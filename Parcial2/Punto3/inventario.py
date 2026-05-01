@@ -117,9 +117,9 @@ class Inventario:
         descuento = 0
 
         if cantidad >= 3:
-            descuento += subtotal * 0.08
+            descuento = subtotal * 0.08
         if subtotal >= 500:
-            descuento += subtotal * 0.05
+            descuento = subtotal * 0.05
 
         total = subtotal - descuento
         producto.cantidad -= cantidad
@@ -134,6 +134,27 @@ class Inventario:
         self.guardarProductos()
         self.cargarProductos()
 
+def PedirFloat(mensaje):
+    while True:
+        try:
+            valor = float(input(mensaje))
+            if valor < 0:
+                print("    El valor no puede ser negativo.")
+                continue
+            return valor
+        except ValueError:
+            print("    Ingresa un número válido.")
+
+def PedirInt(mensaje):
+    while True:
+        try:
+            valor = int(input(mensaje))
+            if valor <= 0:
+                print("    El valor debe ser mayor a 0.")
+                continue
+            return valor
+        except ValueError:
+            print("    Ingresa un número entero válido.")
 
 def CategoriaMasVendida(inventario):
     inventario.cargarProductos()

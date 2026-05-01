@@ -33,7 +33,8 @@ def Menu2():
 
         if opcion == "1":
             paciente = IngresarNuevoPaciente()
-            sistema.registrarPaciente(paciente)
+            if paciente:
+                sistema.registrarPaciente(paciente)
 
         elif opcion == "2":
             sistema.mostrarPacientes()

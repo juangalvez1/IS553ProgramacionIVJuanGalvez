@@ -15,7 +15,7 @@ def MostrarMenu():
     print("3. Ejecutar Punto 3")
     print("4. Ver vehiculo mas costoso")
     print("5. Ver paciente mas critico")
-    print("6. Ver categoria mas vendido")
+    print("6. Ver categoria mas vendida")
     print("-" * 54)
     print("  0. Salir")
     print("=" * 54)

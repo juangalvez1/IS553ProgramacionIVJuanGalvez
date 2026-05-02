@@ -5,3 +5,5 @@ files/
 #carpeta pycache
 __pycache__/
 *.pyc
+
+Lectura/

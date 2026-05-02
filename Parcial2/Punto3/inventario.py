@@ -138,7 +138,7 @@ def PedirFloat(mensaje):
     while True:
         try:
             valor = float(input(mensaje))
-            if valor < 0:
+            if valor <= 0:
                 print("    El valor no puede ser negativo.")
                 continue
             return valor
